@@ -3,6 +3,8 @@ import { LoginComponent } from './auth/login/login.component';
 import { MainComponent } from './layout/main/main.component';
 import { AuthGuard } from './core/guards/auth.guard';
 
+
+
 export const routes: Routes = [
   {
     path: 'login',
@@ -34,6 +36,8 @@ export const routes: Routes = [
         path: 'usuarios',
         loadChildren: () => import('./users/users.routes').then(m => m.USERS_ROUTES),
       },
+ 
+
     ]
   },
 
