@@ -1,1 +1,30 @@
-<p>home works!</p>
+<div>
+    <p class="breadcrumb pb-8">Dashboard > Inicio</p>
+    <div class="flex justify-between w-full pb-8">
+        <h1 class="text-4xl text-primary-violet font-semibold">PROVEEDORES DESTACADOS</h1>
+        <a href="#" class="text-primary-violet">Ver todos los proveedores<i class="fa-solid fa-arrow-right ml-4"></i></a>
+    </div>
+    <div class="flex gap-8 pb-16">
+        <div>
+            <p class="text-primary-violet text-2xl font-normal pb-4">COCA COLA</p>
+            <app-card total="129,90" inputs="200" ouputs="300"></app-card>
+        </div>
+        <div>
+            <p class="text-primary-violet text-2xl font-normal pb-4">PEPSI</p>
+            <app-card total="129,90" inputs="200" ouputs="300" variant="violet"></app-card>
+        </div>
+        <div>
+            <p class="text-primary-violet text-2xl font-normal pb-4">ALICORP</p>
+            <app-card total="129,90" inputs="200" ouputs="300"></app-card>
+        </div>
+        <div>
+            <p class="text-primary-violet text-2xl font-normal pb-4">NESTLE</p>
+            <app-card total="129,90" inputs="200" ouputs="300" variant="violet"></app-card>
+        </div>
+    </div>
+    <div class="flex justify-between w-full pb-8">
+        <h2 class="text-4xl text-primary-violet font-semibold">ULTIMOS MOVIMIENTOS</h2>
+        <a href="#" class="text-primary-violet">Ver todo<i class="fa-solid fa-arrow-right ml-4 text-primary-orange"></i></a>
+    </div>
+    <app-table [columns]="columns" [data]="data"></app-table>
+</div>

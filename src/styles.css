@@ -4,10 +4,29 @@
 @theme {
     --color-primary-orange: #FF914D;
     --color-primary-violet: #55298B;
+    --color-secondary-violet: #A090FF;
     --color-violet-100: #F7F0FF;
     --color-gray-bg: #3a3a3a;
     --color-gray-light: #A5A2B8;
+    --color-gray-violet-light: #F8F7FF;
 }
 *{
     font-family: 'Poppins', sans-serif;
+}
+
+button, a{
+    cursor: pointer;
+}
+
+button:hover{
+    opacity: 0.9;
+}
+a:hover{
+    opacity: 0.9;
+}
+
+.breadcrumb{
+    color: color-mix(in oklab, var(--color-gray-500) 35%, transparent);
+    --tw-font-weight: var(--font-weight-light);
+    font-weight: var(--font-weight-light);
 }

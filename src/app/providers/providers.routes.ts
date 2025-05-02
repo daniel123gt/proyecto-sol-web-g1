@@ -10,7 +10,7 @@ export const PROVIDERS_ROUTES: Routes = [
     loadComponent: () => import('./detail/detail.component').then(m => m.DetailComponent),
   },
   {
-    path: 'form',
+    path: 'crear',
     loadComponent: () => import('./form/form.component').then(m => m.FormComponent), 
   },
 ];

@@ -1,0 +1,22 @@
+<div class="flex flex-col justify-between bg-linear-to-tl from-primary-orange to-primary-orange/40 rounded-xl p-4 w-[200px] h-[200px] shadow"
+    [ngClass]="{
+'bg-linear-to-tl from-primary-orange to-primary-orange/40 text-white': variant === 'orange',
+'bg-gray-violet-light border border-primary-violet text-secondary-violet': variant === 'violet'
+}">
+    <div class="flex flex-col">
+        <span class="text-3xl font-light">s/</span>
+        <span class="text-5xl">{{total}}</span>
+    </div>
+    <div class="flex justify-between font-light" [ngClass]="{
+        'text-primary-violet': variant === 'violet'
+        }">
+        <div>
+            <p>Entradas</p>
+            <p class="text-green-400">{{inputs}} s/</p>
+        </div>
+        <div>
+            <p>Salidas</p>
+            <p class="text-red-500">{{ouputs}} s/</p>
+        </div>
+    </div>
+</div>

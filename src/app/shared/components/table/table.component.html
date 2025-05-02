@@ -1,0 +1,31 @@
+<div class="">
+    <table class="min-w-full bg-gray-violet-light rounded-xl border-separate border-spacing-0 py-4 px-8 text-primary-orange shadow ">
+      <thead class="">
+        <tr class="">
+          <th *ngFor="let col of columns" class="py-2 px-4 border-b-2 border-primary-orange/20 text-left">
+            {{ col.header }}
+          </th>
+          <th *ngIf="actions" class="py-2 px-4 border-b-2 border-primary-orange/20 text-left">
+            Actions
+          </th>
+        </tr>
+      </thead>
+      <tbody class="font-light">
+        <tr *ngFor="let row of data" class="hover:bg-gray-50">
+          <td *ngFor="let col of columns" class="py-4 px-4">
+            {{ row[col.field] }}
+          </td>
+          <td *ngIf="actions" class="text-center">
+            <button class="text-white bg-primary-violet p-1 rounded-md cursor-pointer">Detalle <i class="fa-solid fa-eye"></i></button>
+          </td>
+        </tr>
+  
+        <tr *ngIf="data.length === 0">
+          <td [attr.colspan]="columns.length" class="text-center py-4">
+            No hay datos disponibles
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

@@ -1,22 +1,66 @@
-<div class="flex">
-    <aside class="w-[280px] bg-gray-bg h-screen px-[36px] py-[32px] flex flex-col justify-between">
+<div class="grid grid-cols-12">
+    <aside class="col-span-2 bg-gray-bg h-screen px-[36px] py-[32px] flex flex-col justify-between overflow-clip shadow">
         <div>
             <div class="text-white flex items-center gap-2">
                 <img src="menoss.svg" alt="logo" width="80px">
                 <span class="text-2xl font-bold">MENOSS</span>
             </div>
-            <nav class="text-gray-light pt-8 flex flex-col gap-4">
-                <a routerLink="/dashboard" class="block mb-2"><i class="fa-solid fa-house"></i> <span class="pl-4">Inicio</span></a>
-                <a routerLink="/proveedores" class="block mb-2"><i class="fa-solid fa-bag-shopping"></i><span class="pl-4">Proveedores</span></a>
-                <a routerLink="/pedidos" class="block mb-2"><i class="fa-solid fa-folder-tree"></i><span class="pl-4">Pedidos</span></a>
-                <a routerLink="/productos" class="block mb-2"><i class="fa-solid fa-box"></i><span class="pl-4">Productos / Servicios</span></a>
-                <a routerLink="/usuarios" class="block mb-2"><i class="fa-solid fa-users"></i><span class="pl-4">Usuarios y Roles</span></a>
+            <nav class="text-gray-light pt-8 flex flex-col gap-4 text-xl">
+                <a routerLink="/dashboard" routerLinkActive="text-primary-orange" class="block mb-2"><i class="fa-solid fa-house"></i><span class="pl-4">Inicio</span> </a>
+                <a routerLink="/proveedores" routerLinkActive="text-primary-orange"  class="block mb-2"><i class="fa-solid fa-bag-shopping"></i><span class="pl-4">Proveedores</span></a>
+                <a routerLink="/pedidos" routerLinkActive="text-primary-orange"  class="block mb-2"><i class="fa-solid fa-folder-tree"></i><span class="pl-4">Pedidos</span></a>
+                <a routerLink="/productos" routerLinkActive="text-primary-orange"  class="block mb-2"><i class="fa-solid fa-box"></i><span class="pl-4">Productos / Servicios</span></a>
+                <a routerLink="/usuarios" routerLinkActive="text-primary-orange"  class="block mb-2"><i class="fa-solid fa-users"></i><span class="pl-4">Usuarios y Roles</span></a>
             </nav>
         </div>
         <button class="bg-primary-violet text-white w-full h-[56px] rounded-sm"><i class="fa-solid fa-right-from-bracket"></i><span class="pl-4">Cerrar Sesión</span></button>
     </aside>
 
-    <main class="flex-1 p-6">
-        <router-outlet />
+    <main class="col-span-8 p-8 max-h-screen overflow-scroll">
+        <router-outlet class="overflow-scroll" />
     </main>
+    <div class="col-span-2 overflow-clip shadow-sm p-8 pt-16">
+        <div class="text-primary-violet">
+            <div class="flex flex-col justify-center items-center">
+                <p class="text-xl text-primary-violet font-semibold pb-8">Perfil del Empleado</p>
+                <div class="rounded-full w-[80px] overflow-hidden mb-4 border border-primary-violet">
+                    <img class="w-full" src="/user.png" alt="usuario">
+                </div>
+                <div class="flex flex-col items-center">
+                    <p class="text-primary-violet font-semibold">Juanito Alimaña</p>
+                    <p class="text-primary-orange">Admin</p>
+                </div>
+            </div>
+            <div class="pt-16 pb-8 mb-8 border-b-2 border-primary-violet/5">
+                <p class="font-semibold pb-6">Cuenta</p>
+                <div class="flex flex-col gap-4">
+                    <div class="flex justify-between font-light">
+                        <p class="">Ingreso</p>
+                        <p class="text-primary-orange/80">Junio 22, 2020</p>
+                    </div>
+                    <div class="flex justify-between font-light">
+                        <p class="">Codigo Empleado</p>
+                        <p class="text-primary-orange/80">23839</p>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <p class="font-semibold pb-6">Ultimos Pedidos</p>
+                <div class="flex flex-col gap-4">
+                    <div class="flex justify-between font-light">
+                        <p >PEPSI</p>
+                        <p >2000 s/</p>
+                    </div>
+                    <div class="flex justify-between font-light">
+                        <p >ALICORP</p>
+                        <p >2000 s/</p>
+                    </div>
+                    <div class="flex justify-between font-light">
+                        <p >PEPSI</p>
+                        <p >2000 s/</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
