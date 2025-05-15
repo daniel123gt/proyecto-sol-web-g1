@@ -1,3 +1,21 @@
-<div>
-    PRODUCTOS
-</div>
+<div class="h-full">
+    <p class="breadcrumb pb-8">Dashboard > Productos > Listado</p>
+  
+    <div class="flex flex-col gap-6 justify-between w-full pb-8 mb-8 border-b-2 border-primary-violet/5">
+      <h1 class="text-4xl text-primary-violet font-semibold">MIS PRODUCTOS</h1>
+      <div class="flex justify-between">
+        <input type="text" placeholder="Buscar Producto"
+          class="text-primary-violet placeholder:text-primary-violet/20 shadow px-4 py-2 min-w-[400px] rounded-md border border-primary-violet/10 outline-0">
+      </div>
+    </div>
+  
+    <div class="flex flex-col h-full">
+      <div class="grid grid-cols-4 gap-8">
+        <app-card-product *ngFor="let card of listaProductos" [nombre]="card.nombre" [codigo]="card.codigo" [imagen]="card.imagen" [stock]="card.stock"></app-card-product>
+      </div>
+      <div class="pt-16 mx-auto">
+        <app-paginator></app-paginator>
+      </div>
+    </div>
+  </div>
+  
