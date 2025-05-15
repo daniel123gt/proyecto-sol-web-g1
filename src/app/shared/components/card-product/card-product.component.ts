@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CommonModule, NgFor, NgIf } from '@angular/common';
 import { RouterLink, RouterModule } from '@angular/router';
 
 @Component({
@@ -9,4 +10,8 @@ import { RouterLink, RouterModule } from '@angular/router';
 })
 export class CardProductComponent {
 
+  @Input() nombre: string = '';
+  @Input() codigo: string = '';
+  @Input() imagen: string = '';
+  @Input() stock: string = '';
 }
