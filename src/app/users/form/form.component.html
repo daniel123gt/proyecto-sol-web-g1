@@ -1,1 +1,27 @@
-<p>form works!</p>
+<div class="flex flex-col gap-6 justify-between w-full pb-8 mb-8 border-b-2 border-primary-violet/5">
+    <h1 class="text-4xl text-primary-violet font-semibold">AGREGAR USUARIO</h1>
+  </div>
+  <div>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+
+    <label for="nombre">Apellido:</label>
+    <input type="text" id="Apellido" name="Apellido" placeholder="Ingresa tu apellido" required>
+
+    <label for="nombre">DNI:</label>
+    <input type="number" id="DNI" name="DNI" placeholder="Ingresa tu DNI" required>
+
+    <label for="rol">Selecciona un rol:</label>
+    <select id="rol" name="rol" required>
+        <option value="opcion1">Admin</option>
+        <option value="opcion2">Usuario</option>
+    </select>
+
+    <label for="correo">Nombre de usuario:</label>
+    <input type="text" id="Nombre de usuario" name="Nombre de usuario" placeholder="Ingresa nombre de usuario" required>
+
+    <label for="contraseña">Contraseña:</label>
+    <input type="password" id="contraseña" name="contraseña" placeholder="Ingresa tu contraseña" required>
+
+    <button type="submit">Agregar Usuario</button>
+  </div>

@@ -1,3 +1,43 @@
+<div class="flex flex-col gap-6 justify-between w-full pb-8 mb-8 border-b-2 border-primary-violet/5">
+    <h1 class="text-4xl text-primary-violet font-semibold">LISTA DE USUARIOS</h1>
+    <div class="flex justify-between">
+        <input type="text" placeholder="Buscar Usuario"
+            class="text-primary-violet placeholder:text-primary-violet/20 shadow px-4 py-2 min-w-[400px] rounded-md border border-primary-violet/10 outline-0">
+        <button
+            [routerLink]="['/usuarios/form']" 
+            class="bg-primary-violet p-2 text-white rounded-md shadow cursor-pointer">
+            Crear Usuario <i class="fa-solid"></i>
+        </button>
+        </div>
+</div>
+
+
 <div>
-    USUARIOS
+    <table>
+  <tr>
+    <th>Nombre</th>
+    <th>Usuario</th>
+    <th>Rol</th>
+  </tr>
+  <tr>
+    <td>Judith Arias</td>
+    <td>JArias</td>
+    <td>Usuario</td>
+  </tr>
+  <tr>
+    <td>Daniel Gonzalez</td>
+    <td>DGonzalez</td>
+    <td>Admin</td>
+  </tr>
+  <tr>
+    <td>Miguel Flores</td>
+    <td>MFlores</td>
+    <td>Usuario</td>
+  </tr>
+  <tr>
+    <td>Carlos Gonzales</td>
+    <td>CGonzales</td>
+    <td>Usuario</td>
+  </tr>
+</table>
 </div>

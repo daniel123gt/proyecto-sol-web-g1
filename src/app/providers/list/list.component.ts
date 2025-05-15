@@ -5,6 +5,7 @@ import { ModalComponent } from '../..//shared/components/modal/modal.component';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { InputComponent } from '../../shared/components/input/input.component';
 import { NgFor } from '@angular/common';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-list',
