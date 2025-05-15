@@ -5,19 +5,15 @@
         <div class="flex justify-between">
             <input type="text" placeholder="Buscar Proveedor"
                 class="text-primary-violet placeholder:text-primary-violet/20 shadow px-4 py-2 min-w-[400px] rounded-md border border-primary-violet/10 outline-0">
-                <button class="bg-primary-violet p-2 text-white rounded-md shadow cursor-pointer">Nuevo Proveedor <i class="fa-solid fa-plus"></i></button>
+            <button (click)="showModal = true"
+                class="bg-primary-violet p-2 text-white rounded-md shadow cursor-pointer">Nuevo Proveedor <i
+                    class="fa-solid fa-plus"></i></button>
         </div>
     </div>
     <div class="flex flex-col h-full">
         <div class="grid grid-cols-4 gap-8">
-            <app-card-provider></app-card-provider>
-            <app-card-provider></app-card-provider>
-            <app-card-provider></app-card-provider>
-            <app-card-provider></app-card-provider>
-            <app-card-provider></app-card-provider>
-            <app-card-provider></app-card-provider>
-            <app-card-provider></app-card-provider>
-            <app-card-provider></app-card-provider>
+            <app-card-provider *ngFor="let card of listaProveedor" [nombre]="card.nombre" [codigo]="card.codigo"
+                [imagen]="card.imagen"></app-card-provider>
         </div>
         <div class="pt-16 mx-auto">
             <app-paginator></app-paginator>
@@ -25,3 +21,24 @@
     </div>
 
 </div>
+
+<app-modal [open]="showModal" (close)="showModal = false">
+    <h2 class="text-2xl text-primary-violet font-bold mb-4">Título del Modal</h2>
+    <p class="text-gray-600">Agregar detalle del nuevo proveedor</p>
+    <div>
+        <form [formGroup]="form" class="grid grid-cols-2 gap-4">
+            <app-input label="Usuario" type="text" placeholder="Ingresa tu usuario"
+                 id="username"></app-input>
+
+            <app-input label="Correo" type="email" placeholder="correo@ejemplo.com" id="email"></app-input>
+
+            <button type="submit" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded">
+                Enviar
+            </button>
+        </form>
+
+    </div>
+    <button (click)="showModal = false" class="mt-4 bg-red-400 text-white px-4 py-2 rounded">
+        Cerrar
+    </button>
+</app-modal>

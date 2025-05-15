@@ -1,0 +1,9 @@
+<div *ngIf="open"
+    class="fixed inset-0 bg-black/45 backdrop-blur-xs bg-opacity-50 flex items-center justify-center z-50">
+    <div class="bg-white rounded-lg shadow-xl w-[800px] p-6 relative">
+        <button class="absolute top-4 right-4 text-gray-400 hover:text-gray-600" (click)="onClose()">
+            <i class="fa-solid fa-xmark text-2xl"></i>
+        </button>
+        <ng-content></ng-content>
+    </div>
+</div>
